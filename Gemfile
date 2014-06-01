@@ -8,6 +8,12 @@ gem "fastercsv", "~> 1.5.0", :platforms => [:mri_18, :mingw_18, :jruby]
 gem "builder", "3.0.0"
 gem "request_store"
 gem "mime-types"
+gem 'capistrano', '~> 3.2.0'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
+gem 'capistrano3-nginx_unicorn'
+gem 'unicorn'
 
 # Optional gem for LDAP authentication
 group :ldap do
@@ -82,6 +88,7 @@ end
 group :development do
   gem "rdoc", ">= 2.4.2"
   gem "yard"
+  gem "letter_opener"
 end
 
 group :test do
